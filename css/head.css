@@ -1,0 +1,11 @@
+html{
+	background-color: #A9A9A9; font-size: 18px; font-family: tahoma, helvetica, geneva, arial, sans-serif;
+}
+.top{
+	width: 1002px; margin: 20px auto 0 auto; font-size: 12px; background-color: #696969; color: white; border: 1px solid black;  
+}	
+
+.banner_center{
+	height: 92px; width: 1000px; margin:0 auto 0 auto; text-align: center; border: 1px solid black; 
+}
+
