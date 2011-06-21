@@ -1,0 +1,25 @@
+
+.login_div{
+	height: 320px; width: 1000px; margin: 10px auto 0 auto; background-color: #FFFFFF; border: 1px solid black;
+}
+
+.login_top{
+	text-align: center; width: 600px; height: 25px; margin: 60px auto 0 auto; background-color: #696969; color: white; border: 1px solid black;
+}
+
+.login_title{
+	text-indent: 5px; text-align: left; padding-top: 5px; font-weight: bold;
+}
+
+.login_inner{
+	height: 153px; width: 600px; margin: 0 auto ; background-color: white; border: 1px solid black;background-color: #D3D3D3;
+}
+
+.login_text{
+	height: 20px; padding-left: 10px; padding-top: 8px; text-align: left; color: black;
+}
+
+.login_table{
+	height: 40px; weight: 200px; margin: 20px auto 0 auto; 
+}
+

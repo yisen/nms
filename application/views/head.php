@@ -2,24 +2,24 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="css/head.css">
-	<link rel="stylesheet" type="text/css" href="css/foot.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/css/head.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/css/foot.css">
 	
 	
-	<script type="text/javascript" charset="utf-8" src="css/jquery.js"></script>
-	<script type="text/javascript" charset="utf-8" src="css/menu.js"></script>
-	<title>ANYK网络管理系统</title>
+	<script type="text/javascript" charset="utf-8" src="<?php echo base_url();?>/css/jquery.js"></script>
+	<script type="text/javascript" charset="utf-8" src="<?php echo base_url();?>/css/menu.js"></script>
+	<title><?php echo $base_info->title;?></title>
 
 </head>
 <body>
 	<table class="top">
 		<tr>
-			<td style="text-align: left;">产品型号：交换机XXZZNN</td>
-			<td style="text-align: right;">固件版本：1.0</td>
+			<td style="text-align: left;"><?php echo $base_info->banner;?></td>
+			<td style="text-align: right;">软件版本：<?php echo $base_info->version;?></td>
 		</tr>
 	</table>
 	<div class="banner_center">
-		<img src="img/top.jpg" />
+		<img src="<?php echo base_url();?>/img/<?php echo $base_info->logo_path;?>" />
 	</div>
 	<div class="login_banner"></div>
 </body>
