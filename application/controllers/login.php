@@ -1,6 +1,4 @@
 <?php
-//定义全局变量
-$base_info;
 
 class Login extends CI_Controller {
 
@@ -13,9 +11,7 @@ class Login extends CI_Controller {
 	//首页
 	function index($flag = '')
 	{
-		$_base_info = $this->nmsdb->get_base_info();
-		global $base_info;
-		$base_info = $_base_info;
+		$base_info = $this->nmsdb->get_base_info();
 		$data['base_info'] = $base_info;
 		
 		if ($flag == '')
@@ -31,6 +27,7 @@ class Login extends CI_Controller {
 		$this->session->set_userdata('company_name', $base_info->name);
 		$this->session->set_userdata('version', $base_info->version);
 		$this->session->set_userdata('title', $base_info->title);
+		
 		$this->load->view('head', $data);
 		$this->load->view('login');
 		$this->load->view('foot');
@@ -49,13 +46,6 @@ class Login extends CI_Controller {
 			{
 				$this->session->set_userdata('username', $username);
 				$this->session->set_userdata('access', $user_info->access);
-				
-				//打印数组
-				/*
-				foreach ($this->session->all_userdata() as $key=>$value)
-				{
-					echo $key . ': ' . $value . br();	
-				}*/
 				
 				redirect('/snmp');
 				

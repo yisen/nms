@@ -7,7 +7,6 @@
 	
 	
 	<script type="text/javascript" charset="utf-8" src="<?php echo base_url();?>/css/jquery.js"></script>
-	<script type="text/javascript" charset="utf-8" src="<?php echo base_url();?>/css/menu.js"></script>
 	<title><?php echo $base_info->title;?></title>
 
 </head>
