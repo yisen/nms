@@ -1,0 +1,69 @@
+
+.snmp_div{
+	height: 450px; width: 1000px; margin: 5px auto 0 auto; background-color: white; border: 1px solid black;
+}
+
+.snmp_top_menu{
+	height: 47px; width: 978px; margin: 4px;
+}
+
+.snmp_top_menu_cell{
+	width: 130px; border: 1px solid black; margin: 10px; height: 25px; text-align: center;
+	vertical-align: middle; line-height: 25px;
+}
+
+.snmp_err_msg{
+	width: 250px; text-align: center; color: red; font-weight: bold; border: 2px red dashed;
+	height: 25px; vertical-align: middle; line-height: 25px;
+}
+
+.snmp_list_div{
+	border: 1px solid black; width: 970px; height: 380px;
+	margin: 0px 14px 10px 14px;
+}
+
+.snmp_list_cell{
+	width: 150px;
+}
+
+.snmp_add_div{
+	width: 978px; height: 428px; border: 1px solid black; margin: 10px;
+}
+
+.snmp_add_cell{
+	width: 110px; height: 20px; border: 1px solid black; background-color: white;
+	text-align: center; vertical-align: middle; line-height: 20px;
+}
+
+.snmp_add_input{
+	width: 110px; height: 20px; border: 0px; padding: 0px;
+	text-align: center; vertical-align: middle; line-height: 20px;
+}
+
+.snmp_add_table{
+	margin: 30px auto;
+}
+
+.snmp_add_border{
+	width: 650px; height: 300px; border: 1px solid black; margin: 65px auto; background-color: #D3D3D3;
+}
+
+.snmp_add_banner{
+	width: 650px; height: 25px; border-bottom: 1px solid black; background-color: white;
+	vertical-align: middle; line-height: 25px; font-weight: bold;
+}
+
+.snmp_add_submit{
+	width: 330px; margin:-30px auto;
+	text-align: center; font-weight: bold; color: red;
+}
+
+.snmp_add_submit_cell{
+	width: 100px;
+}
+
+.snmp_add_err_msg{
+	width: 100px; height: 20px; border: 2px dashed red;
+}
+
+
