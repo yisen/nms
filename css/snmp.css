@@ -27,7 +27,7 @@
 }
 
 .snmp_add_div{
-	width: 978px; height: 428px; border: 1px solid black; margin: 10px;
+	width: 970px; height: 420px; border: 1px solid black; margin: 14px auto;
 }
 
 .snmp_add_cell{
@@ -64,6 +64,12 @@
 
 .snmp_add_err_msg{
 	width: 100px; height: 20px; border: 2px dashed red;
+	text-align: center; vertical-align: middle; line-height: 20px; font-weight: bold; color: red;
+}
+
+.textarea{
+	width: 957px; height: 366px; margin: 4px;
+	font-size: 13px;
 }
 
 

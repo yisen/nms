@@ -56,7 +56,7 @@
 				{
 					echo '<tr>';
 					echo '<td>' . form_radio('snmp_dev', $device->id) . '</td>';
-					echo '<td>' . $device->name . '</td>';			
+					echo '<td>' . anchor("/snmp/dev/{$device->id}", "$device->name") . '</td>';
 					echo '<td>' . $device->ipaddr. '</td>';		
 					echo '<td>' . $device->type. '</td>';	
 					echo '<td>' . $device->rwcommunity. '</td>';		

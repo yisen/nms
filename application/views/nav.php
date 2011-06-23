@@ -2,6 +2,16 @@
 <head>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/css/nav.css">
 <script type="text/javascript" charset="utf-8" src="<?php echo base_url();?>/css/nav.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+//页面链接
+	$("#nav_1_1").click(function(){
+		window.location="<?php echo site_url() . '/snmp';?>";
+	});
+});
+</script>
+
 </head>
 <body>
 	<div class="nav_div">
@@ -30,4 +40,8 @@
 		</table>
 	</div>
 </body>
+
 </html>
+
+
+	

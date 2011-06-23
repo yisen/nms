@@ -37,6 +37,10 @@ $(document).ready(function(){
 		$(this).css("background-color", "white");
 		});
 	
+	//链接
+
+
+	
 	
 });	
 
