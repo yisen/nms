@@ -36,12 +36,6 @@ $(document).ready(function(){
 	$(".nav_menu_cell_div").mouseleave(function(){
 		$(this).css("background-color", "white");
 		});
-	
-	//链接
-
-
-	
-	
 });	
 
 

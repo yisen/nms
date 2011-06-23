@@ -177,6 +177,35 @@ class Snmp extends CI_Controller {
 			redirect('/');
 	}
 	
+	//snmp query
+	function snmp_query($ret = '', $flag = '')
+	{
+		if ($this->session->userdata('username'))
+		{
+			$base_info = get_base_info($this);
+			$snmp_list = $this->nmsdb->snmp_list();
+			foreach ($snmp_list as $obj)
+			{
+				$dev_id[$obj->id] = $obj->ipaddr;
+			}
+			
+			$data = array(
+				'base_info' => $base_info,
+				'flag' => $flag,
+				'snmp_list' => $snmp_list,
+				'dev_id' => $dev_id,
+				'ret' => $ret,
+			);
+			
+			$this->load->view('head', $data);
+			$this->load->view('nav');
+			$this->load->view('snmp_query');
+			$this->load->view('foot');
+		}
+		else
+			redirect('/');
+	}
+	
 	//处理 修改/删除snmp 设备
 	function do_snmp_dev()
 	{
@@ -218,16 +247,21 @@ class Snmp extends CI_Controller {
 	function do_snmp_query()
 	{
 		$this->form_validation->set_rules('oid', 'OID', 'trim|required');
-		$this->form_validation->set_rules('ipaddr', 'IP', 'trim|required');
+		//$this->form_validation->set_rules('ipaddr', 'IP', 'trim|required');
 		$id = $this->input->post('dev_id');
 		$submit_type = $this->input->post('dev_submit_type');
 		
 		if ($this->form_validation->run() == TRUE)
 		{
 			$oid = $this->input->post('oid');
-			$ip = $this->input->post('ipaddr');
-			$rw = $this->input->post('dev_rw');
-			$ro = $this->input->post('dev_ro');
+			//$ip = $this->input->post('ipaddr');
+			//$rw = $this->input->post('dev_rw');
+			//$ro = $this->input->post('dev_ro');
+			
+			$dev = $this->nmsdb->get_dev_info($id);
+			$ip = $dev->ipaddr;
+			$rw = $dev->rwcommunity;
+			$ro = $dev->rocommunity;
 			
 			if ($submit_type == 'snmp_get')
 			{
@@ -237,10 +271,10 @@ class Snmp extends CI_Controller {
 				{
 					//统一显示格式
 					$msg[$oid] = $ret . "\n";
-					$this->dev($id, '', $msg);
+					$this->snmp_query($msg);
 				}
 				else
-					$this->dev($id, 'w');
+					$this->snmp_query('', 'w');
 			}
 			else if ($submit_type == 'snmp_walk')
 			{
@@ -248,14 +282,14 @@ class Snmp extends CI_Controller {
 				
 				if ($ret)
 				{
-					$this->dev($id, '', $ret);
+					$this->snmp_query($ret);
 				}
 				else
-					$this->dev($id, 'w');
+					$this->snmp_query('', 'w');
 			}
 		}
 		else
-		$this->dev($id, 'w');
+		$this->snmp_query('', 'w');
 	}
 }
 ?>

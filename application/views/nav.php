@@ -7,7 +7,10 @@
 $(document).ready(function(){
 //页面链接
 	$("#nav_1_1").click(function(){
-		window.location="<?php echo site_url() . '/snmp';?>";
+		window.location="<?php echo site_url() . '/snmp/index';?>";
+	});
+	$("#nav_1_2").click(function(){
+		window.location="<?php echo site_url() . '/snmp/snmp_query';?>";
 	});
 });
 </script>
@@ -20,7 +23,7 @@ $(document).ready(function(){
 				<td id="nav_1_root" class="nav_cell">SNMP
 				<div id="nav_1" class="nav_menu_div">
 				<div id="nav_1_1" class="nav_menu_cell_div" style="border-bottom-width: 1px;">设备列表</div>
-				<div id="nav_1_2" class="nav_menu_cell_div">设备详情</div>
+				<div id="nav_1_2" class="nav_menu_cell_div">SNMP查询</div>
 				</div>
 				
 				</td>

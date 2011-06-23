@@ -6,9 +6,9 @@ $(document).ready(function()
 	$("#oid").focus(function(){
 		$("#oid").attr("value", "");
 	});
-	$("#ipaddr").focus(function(){
-		$("#ipaddr").attr("value", "");
-	});
+//	$("#ipaddr").focus(function(){
+//		$("#ipaddr").attr("value", "");
+//	});
 	
 	//刷新后重置，snmp_list的表单
 	$("#submit_type").attr("value", "");
@@ -34,14 +34,18 @@ $(document).ready(function()
 	$("#dev_submit_type").attr("value", "");
 	//
 	var msg = "please input: OID";
-	var ipmsg = "please input: IP";
+	//var ipmsg = "please input: IP";
 	$("#oid").attr("value", msg);
-	$("#ipaddr").attr("value", ipmsg);
+	//$("#ipaddr").attr("value", ipmsg);
 	$("#snmp_get").click(function(){
-		if (($("#oid").attr("value") == msg) || ($("#ipaddr").attr("value") == ipmsg))
+//		if (($("#oid").attr("value") == msg) || ($("#ipaddr").attr("value") == ipmsg))
+//		{
+//			$("#oid").attr("value", "");
+//			$("#ipaddr").attr("value", "1");
+//		}
+		if (($("#oid").attr("value") == msg))
 		{
 			$("#oid").attr("value", "");
-			$("#ipaddr").attr("value", "1");
 		}
 		$("#dev_submit_type").attr("value", "snmp_get");
 		$("#form_snmp_query").submit();
